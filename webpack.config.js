@@ -1,5 +1,5 @@
 const path = require('path');
-const RefreshWebPackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+// const RefreshWebPackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 // process.env.NODE_ENV='priduction' //배포할 때는 이것도 써줘야 함
 
 module.exports = {
@@ -26,9 +26,9 @@ module.exports = {
                             "@babel/preset-env",
                             '@babel/preset-react'
                         ],
-                    plugins: [
-                        ['react-refresh/babel'],
-                    ],
+                    // plugins: [
+                    //     ['react-refresh/babel'],
+                    // ],
                 },
             },
             {
@@ -37,16 +37,16 @@ module.exports = {
             },
         ],
     },
-    plugins: [
-        new RefreshWebPackPlugin(),
-    ],
+    // plugins: [
+    //     new RefreshWebPackPlugin(),
+    // ],
     output: {//출력, 하나의 자바스크립트 파일로 출력해줌
         path: path.join(__dirname, 'dist'),
         filename: 'app.js',
         publicPath: '/dist/',
     },
-    devServer: {
-        publicPath: '/dist/',
-        hot: true,
-    },
+    // devServer: {
+    //     publicPath: '/dist/',
+    //     hot: true,
+    // },
 }
