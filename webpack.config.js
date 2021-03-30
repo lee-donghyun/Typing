@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
     name: 'typing-app',
-    mode: 'development',//배포시 production
+    mode: 'development',//배포시 production,, development
     devtool: 'eval',
     resolve: {
         extensions: ['.js', '.jsx', '.css']// 이거를 쓰면 entry/app에서 확장자를 알아서 찾아줌
@@ -50,3 +50,4 @@ module.exports = {
     //     hot: true,
     // },
 }
+
