@@ -4,7 +4,7 @@ const RefreshWebPackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
     name: 'typing-app',
-    mode: 'development',//배포시 production
+    mode: 'production',//배포시 production,, development
     devtool: 'eval',
     resolve: {
         extensions: ['.js', '.jsx', '.css']// 이거를 쓰면 entry/app에서 확장자를 알아서 찾아줌
