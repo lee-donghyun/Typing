@@ -3,4 +3,8 @@
 +    React.js Framework (ES6+) 
 +    CSS-in-JS (styled-components) 
 ## 2. 설명
-Hook으로 작성되었습니다. useContext(), useReducer()로 데이터를 관리합니다.
+타자 연습할 수 있는 Web Application입니다. Hook으로 작성되었습니다. useContext(), useReducer()로 데이터를 관리합니다.
+
+Link : [Typing][Typinglink]
+
+[Typinglink]: https://lee-donghyun.github.io/Typing/ "Go Typing"
