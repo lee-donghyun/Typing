@@ -32,7 +32,7 @@ const Matcher = () => {
                 <Route path='/Typing/LongPhrase' component={LongPhrase} />
                 <Route path='/Typing/Settings' component={Settings} />
                 <Route path='/Typing/End' component={EndPage}/>
-                <Route path='/Typing/' component={StartPage} />
+                <Route path='/' component={StartPage} />
             </Switch>
         </Content>
     );

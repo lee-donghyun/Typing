@@ -4,6 +4,7 @@ import { Radio, Input, InputNumber } from 'antd';
 import styled from 'styled-components';
 import { UserOutlined } from '@ant-design/icons';
 import { TypingContext } from '../Typing';
+import {LoginButton} from './component/LoginWithKakao';
 
 const Element = styled.div`
     // background:grey;
@@ -53,6 +54,7 @@ const Settings = () => {
                 <Span>목표 정확도 (%)</Span>
                 <InputNumber min={1} max={100} defaultValue={90} onChange={onChangeaccuracy} />
             </Element>
+            <LoginButton/>
         </Div>
     );
 }
