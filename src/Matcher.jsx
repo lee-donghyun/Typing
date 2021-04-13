@@ -26,13 +26,13 @@ const Matcher = () => {
     return (
         <Content style={{ padding: '20' }}>
             <Switch>
-                <Route path='/Fingers' component={Fingers} />
-                <Route path='/Word' component={Word} />
-                <Route path='/ShortPhrase' component={ShortPhrase} />
-                <Route path='/LongPhrase' component={LongPhrase} />
-                <Route path='/Settings' component={Settings} />
-                <Route path='/End' component={EndPage}/>
-                <Route path='/' component={StartPage} />
+                <Route path='/Typing/Fingers' component={Fingers} />
+                <Route path='/Typing/Word' component={Word} />
+                <Route path='/Typing/ShortPhrase' component={ShortPhrase} />
+                <Route path='/Typing/LongPhrase' component={LongPhrase} />
+                <Route path='/Typing/Settings' component={Settings} />
+                <Route path='/Typing/End' component={EndPage}/>
+                <Route path='/Typing/' component={StartPage} />
             </Switch>
         </Content>
     );

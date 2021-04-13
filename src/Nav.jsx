@@ -51,10 +51,10 @@ const Nav = () => {
             </UserInfo>
             <Divider />
             <Menu mode='inline' onClick={onClickMenu} defaultSelectedKeys={['자리 연습']} >
-                <Menu.Item key='자리 연습' ><Link to='/'>자리 연습</Link></Menu.Item>
-                <Menu.Item key='낱말 연습'><Link to='/'>낱말 연습</Link></Menu.Item>
-                <Menu.Item key='짧은 글 연습'><Link to='/'>짧은 글 연습</Link></Menu.Item>
-                <Menu.Item key='긴 글 연습'><Link to='/'>긴 글 연습</Link></Menu.Item>
+                <Menu.Item key='자리 연습' ><Link to='/Typing/'>자리 연습</Link></Menu.Item>
+                <Menu.Item key='낱말 연습'><Link to='/Typing/'>낱말 연습</Link></Menu.Item>
+                <Menu.Item key='짧은 글 연습'><Link to='/Typing/'>짧은 글 연습</Link></Menu.Item>
+                <Menu.Item key='긴 글 연습'><Link to='/Typing/'>긴 글 연습</Link></Menu.Item>
             </Menu>
         </Sider>
     );

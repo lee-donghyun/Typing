@@ -43,13 +43,13 @@ const getDescription = (mode) => {
 export const modeLink = (mode) =>{
     switch(mode){
         case '자리 연습':
-            return '/Fingers';
+            return '/Typing/Fingers';
         case '낱말 연습':
-            return '/Word';
+            return '/Typing/Word';
         case '짧은 글 연습':
-            return '/ShortPhrase';
+            return '/Typing/ShortPhrase';
         case '긴 글 연습':
-            return '/LongPhrase';
+            return '/Typing/LongPhrase';
     }
 }
 

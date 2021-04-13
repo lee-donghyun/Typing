@@ -29,7 +29,7 @@ const UpperStatus = () => {
     const onClickSetting= useCallback((e)=>{
         e.preventDefault();
         dispatch({type:'CHANGE_MODE',mode:'설정'});
-        history.push('/Settings');
+        history.push('/Typing/Settings');
     });
     return (
         <Header style={{ padding: '0',display:'inline-block' }}>
