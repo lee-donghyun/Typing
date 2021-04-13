@@ -4,7 +4,7 @@ import { Radio, Input, InputNumber } from 'antd';
 import styled from 'styled-components';
 import { UserOutlined } from '@ant-design/icons';
 import { TypingContext } from '../Typing';
-import {LoginButton} from './component/LoginWithKakao';
+import {LoginButton} from './Kakao/LoginWithKakao';
 
 const Element = styled.div`
     // background:grey;
@@ -48,11 +48,11 @@ const Settings = () => {
             </Element>
             <Element>
                 <Span>목표 타수</Span>
-                <InputNumber min={1} max={2000} defaultValue={300} onChange={onChangeSpeed} />
+                <InputNumber min={1} max={2000} defaultValue={goal[0]} onChange={onChangeSpeed} />
             </Element>
             <Element>
                 <Span>목표 정확도 (%)</Span>
-                <InputNumber min={1} max={100} defaultValue={90} onChange={onChangeaccuracy} />
+                <InputNumber min={1} max={100} defaultValue={goal[1]} onChange={onChangeaccuracy} />
             </Element>
             <LoginButton/>
         </Div>

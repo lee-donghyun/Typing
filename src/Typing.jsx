@@ -1,10 +1,10 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useEffect, useReducer } from 'react';
 import { Layout } from 'antd';
 import UpperStatus from './UpperStatus';
 import Matcher from './Matcher';
 import Nav from './Nav';
 import { BrowserRouter, Switch } from 'react-router-dom';
-// import { generateLetters } from './modes/Fingers';
+import { KaKaoInit, setInfo } from './modes/Kakao/LoginWithKakao';
 
 const generateLetters = (mode) => {
     switch (mode) {
@@ -79,6 +79,18 @@ const Typing = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
     const { mode, name, goal, record, start, end, typed, wrong, letters } = state;
     const value = { dispatch, mode, name, goal, record, start, end, typed, wrong, letters };
+
+    useEffect(() => {
+        KaKaoInit();
+    }, []);
+
+    useEffect(() => {
+        if (Kakao.Auth.getAccessToken()) {
+            console.log('record : ', record, ' goal : ', goal);
+            setInfo(JSON.stringify(goal),JSON.stringify(record));
+        }
+    }, [goal, record]);
+
     return (
         <BrowserRouter>
             <TypingContext.Provider value={value}>
