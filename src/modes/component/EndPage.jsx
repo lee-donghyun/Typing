@@ -83,7 +83,7 @@ const EndPage = () => {
             </Body>
             <Name>
                 <Button size='large' style={{ margin: '0 10px 2%' }}><Link to={modeLink(mode)}>다시하기</Link></Button>
-                <Button size='large' style={{ margin: '0 10px 2%' }}><Link to='/'>그만하기</Link></Button>
+                <Button size='large' style={{ margin: '0 10px 2%' }}><Link to='/Typing/'>그만하기</Link></Button>
             </Name>
         </Div>
     );

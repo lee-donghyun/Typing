@@ -53,7 +53,7 @@ const Word = () => {
                 const now = Date.now();
                 console.log(now);
                 dispatch({ type: 'FIN', typed: typed, wrong: wrong, end: now });
-                history.push('/End');
+                history.push('/Typing/End');
             }
             else {
                 setIndex((prev) => prev + 1);

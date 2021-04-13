@@ -78,7 +78,7 @@ const Fingers = () => {
             const now = Date.now();
             console.log(now);
             dispatch({ type: 'FIN', typed: typed, wrong: wrong, end: now });
-            history.push('/End');
+            history.push('/Typing/End');
         }
         else {
             setRange((prev) => [prev[0] + 1, prev[1] + 1]);
