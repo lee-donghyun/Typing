@@ -4,6 +4,7 @@
 KakaoAPI를 활용해 사용자 정보를 가져오고 저장합니다. (Demo : [Typing](https://lee-donghyun.github.io/Typing/)) 
 
 ![preview](/preview.png)
+![preview_kakao](/preview_kakao.png)
 
 ## 2. 사용 기술
 | 사용 기술 | 설명 |
