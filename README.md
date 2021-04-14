@@ -26,7 +26,7 @@ KakaoAPI를 활용해 사용자 정보를 가져오고 저장합니다. (Demo : 
 | goal : number[] | 목표 타수와 정확도 (Kakao와 동기화) |
 |record : number[] | 사용자 타수와 정확도 (Kakao와 동기화) |
 |start : number|연습 시작 시각|
-|end: number|연습 끝난 시각|
+|end : number|연습 끝난 시각|
 |letters : string|연습 시 사용자에게 보여줄 글자|
 |kakao : { login : boolean, profile_img : string }|KakaoAPI에서 받아온 정보 저장|
 
