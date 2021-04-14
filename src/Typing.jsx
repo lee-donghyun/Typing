@@ -27,6 +27,10 @@ const initialState = {
     typed: 0,
     wrong: 0,
     letters: '',
+    kakao: {
+        login: false,
+        profile_img: undefined,
+    }
 }
 const reducer = (state, action) => {
     switch (action.type) {
@@ -69,6 +73,11 @@ const reducer = (state, action) => {
                 wrong: action.wrong,
                 end: action.end,
             }
+        case 'KAKAO':
+            return {
+                ...state,
+                kakao: action.kakao,
+            }
     }
 }
 
@@ -78,19 +87,19 @@ let firstRender = true;
 const Typing = () => {
 
     const [state, dispatch] = useReducer(reducer, initialState);
-    const { mode, name, goal, record, start, end, typed, wrong, letters } = state;
-    const value = { dispatch, mode, name, goal, record, start, end, typed, wrong, letters };
+    const { mode, name, goal, record, start, end, typed, wrong, letters, kakao } = state;
+    const value = { dispatch, mode, name, goal, record, start, end, typed, wrong, letters, kakao };
 
     useEffect(() => {
         KaKaoInit(dispatch);
     }, []);
 
     useEffect(() => {
-        if(!firstRender){
+        if (!firstRender) {
             setInfo(JSON.stringify(goal), JSON.stringify(record));
         }
-        else{
-            firstRender=false;
+        else {
+            firstRender = false;
         }
     }, [goal, record]);
 

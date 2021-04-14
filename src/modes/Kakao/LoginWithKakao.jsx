@@ -8,6 +8,14 @@ const getInfo = (dispatch) => {
         success: (response) => {
             console.log(response.properties);
             dispatch({ type: 'CHANGE_NAME', name: response.properties.nickname });
+            
+            if('profile_image_url' in response.kakao_account.profile){
+                dispatch({ type: 'KAKAO', kakao: { login: true, profile_img: response.kakao_account.profile.profile_image_url } });
+            }
+            else{
+                dispatch({ type: 'KAKAO', kakao: { login: true, profile_img: undefined } });
+            }
+
             if ('goal' in response.properties) {
                 console.log('goal is in prperties : ' + ('goal' in response.properties));
                 dispatch({ type: 'SET_GOAL', goal: JSON.parse(response.properties.goal) });
