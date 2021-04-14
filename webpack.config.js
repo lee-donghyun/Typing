@@ -26,9 +26,9 @@ module.exports = {
                             "@babel/preset-env",
                             '@babel/preset-react'
                         ],
-                    // plugins: [
-                    //     ['react-refresh/babel'],
-                    // ],
+                    plugins: [
+                        ['react-refresh/babel'],
+                    ],
                 },
             },
             {

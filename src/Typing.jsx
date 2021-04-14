@@ -73,6 +73,7 @@ const reducer = (state, action) => {
 }
 
 export const TypingContext = createContext({ dispatch: () => { }, mode: '' });
+let firstRender = true;
 
 const Typing = () => {
 
@@ -81,13 +82,15 @@ const Typing = () => {
     const value = { dispatch, mode, name, goal, record, start, end, typed, wrong, letters };
 
     useEffect(() => {
-        KaKaoInit();
+        KaKaoInit(dispatch);
     }, []);
 
     useEffect(() => {
-        if (Kakao.Auth.getAccessToken()) {
-            console.log('record : ', record, ' goal : ', goal);
-            setInfo(JSON.stringify(goal),JSON.stringify(record));
+        if(!firstRender){
+            setInfo(JSON.stringify(goal), JSON.stringify(record));
+        }
+        else{
+            firstRender=false;
         }
     }, [goal, record]);
 
