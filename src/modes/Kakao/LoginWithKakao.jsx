@@ -56,7 +56,7 @@ export const LoginButton = () => {
     return (
         <div onClick={loginWithKakao}>
             <img
-                src='/src/modes/Kakao/kakao_login_medium_narrow.png'
+                src='https://raw.githubusercontent.com/lee-donghyun/Typing/master/src/modes/Kakao/kakao_login_medium_narrow.png'
                 width="222"
             />
         </div>
